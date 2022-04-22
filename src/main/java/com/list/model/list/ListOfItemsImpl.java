@@ -32,7 +32,7 @@ public class ListOfItemsImpl implements ListOfItems{
     }
 
     @Override
-    public void completeItem(Item item) {
+    public void remove(Item item) {
         item.setItemState("Closed");
         items.remove(item);
     }

@@ -11,4 +11,5 @@ public interface Item {
     Priority getPriority();
     void setPriority(Priority priority);
     void setItemState(String itemState);
+    String getItemState();
 }

@@ -8,5 +8,5 @@ public interface ListOfItems {
     void sortByPriority(List<Item> items);
     void sortByDate(List<Item> items);
     void addItem(Item item);
-    void completeItem(Item item);
+    void remove(Item item);
 }
