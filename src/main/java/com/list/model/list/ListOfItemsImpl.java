@@ -36,4 +36,5 @@ public class ListOfItemsImpl implements ListOfItems{
         item.setItemState("Closed");
         items.remove(item);
     }
+
 }
