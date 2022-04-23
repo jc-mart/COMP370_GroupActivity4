@@ -31,7 +31,8 @@ jobs:
       with:
         name: Package
         path: staging
-        
+    - uses: actions/checkout@master
+    - uses: codecov/codecov-action@v2     
         
   test:
     runs-on: ubuntu-latest
