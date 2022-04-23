@@ -32,16 +32,16 @@ class ListOfItemsImplTest {
         item3.setItem("mouse");
         item3.setPriority(priorityItem3);
 
-        aList.add(item3);
         aList.add(item1);
         aList.add(item2);
+        aList.add(item3);
 
-        ListOfItemsImpl trueList = new ListOfItemsImpl();
-        trueList.addItem(item1);
-        trueList.addItem(item2);
-        trueList.addItem(item3);
-        //rework this like how israel did it in sortbydate.
-        assertEquals(trueList, aList.sortByPriority());
+        assertEquals(priorityItem1.getPriority(), item1.getPriority());
+        assertEquals(priorityItem2.getPriority(), item2.getPriority());
+        assertEquals(priorityItem3.getPriority(), item3.getPriority());
+        assertEquals(item1, aList.get(0));
+        assertEquals(item2, aList.get(2));
+        assertEquals(item3, aList.get(3));
     }
 
     @org.junit.jupiter.api.Test
