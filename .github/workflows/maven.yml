@@ -33,8 +33,6 @@ jobs:
         path: staging
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v2
-    - name: Upload to codecov
-      run: curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
         
   test:
     runs-on: ubuntu-latest
