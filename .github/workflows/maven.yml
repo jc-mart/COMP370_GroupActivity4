@@ -31,4 +31,13 @@ jobs:
       with:
         name: Package
         path: staging
+        
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit tests
+        run: mvn -B test --file pom.xml
+      
+          
       
