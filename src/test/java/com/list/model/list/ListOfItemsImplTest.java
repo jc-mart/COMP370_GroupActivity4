@@ -36,12 +36,12 @@ class ListOfItemsImplTest {
         aList.add(item2);
         aList.add(item3);
 
-        assertEquals(priorityItem1.getPriority(), item1.getPriority());
-        assertEquals(priorityItem2.getPriority(), item2.getPriority());
-        assertEquals(priorityItem3.getPriority(), item3.getPriority());
-        assertEquals(item1, aList.get(0));
-        assertEquals(item2, aList.get(2));
-        assertEquals(item3, aList.get(3));
+        assertEquals(priorityItem1, item1.getPriority());
+        assertEquals(priorityItem2, item2.getPriority());
+        assertEquals(priorityItem3, item3.getPriority());
+        assertEquals(0, aList.indexOf(item1));
+        assertEquals(1, aList.indexOf(item2));
+        assertEquals(2, aList.indexOf(item3));
     }
 
     @org.junit.jupiter.api.Test
@@ -69,40 +69,51 @@ class ListOfItemsImplTest {
         assertEquals(calendar, item1.getDueDate());
         assertEquals(calendar2, item2.getDueDate());
         assertEquals(calendar3, item3.getDueDate());
-        assertEquals("School", aList.indexOf(0));
-        assertEquals("Eat", aList.indexOf(1));
-        assertEquals("Sleep", aList.indexOf(2));
+        assertEquals("School", item1.getItem());
+        assertEquals("Eat", item2.getItem());
+        assertEquals("Sleep", item3.getItem());
+        assertEquals(0, aList.indexOf(item1));
+        assertEquals(1, aList.indexOf(item2));
+        assertEquals(2, aList.indexOf(item3));
     }
 
     @org.junit.jupiter.api.Test
     void addItem() {
-        Item item1 = new ItemImpl();
-        item1.setItem("Homework");
-        aList.add(item1);
-        assertEquals("Homework", aList.contains("Homework"));
-    }
-
-    @org.junit.jupiter.api.Test
-    void remove() {
         Priority high = new PriorityImpl();
         high.setPriority("High");
 
         Item item1 = new ItemImpl();
+        item1.setItem("Homework");
+        item1.setPriority(high);
+        aList.add(item1);
+
+        assertEquals(high, item1.getPriority());
+        assertEquals("Homework", item1.getItem());
+        assertTrue(aList.contains(item1));
+    }
+
+    @org.junit.jupiter.api.Test
+    void completed() {
+        Priority high = new PriorityImpl();
+        high.setPriority("High");
+        high.getPriority();
+
+        Item item1 = new ItemImpl();
         item1.setItem("bread");
-        item1.setItemState("Open");
         item1.setPriority(high);
         Calendar calendar = Calendar.getInstance();
         calendar.set(2022,12,1);
         item1.setDueDate(calendar);
 
         aList.add(item1);
+        item1.setItemState("Completed");
         aList.remove(item1);
 
         assertEquals("bread", item1.getItem());
-        assertEquals("Open", item1.getItemState());
-        assertEquals("High", item1.getPriority().getPriority());
+        assertEquals(high, item1.getPriority());
         assertEquals(calendar, item1.getDueDate());
+        assertEquals("Completed", item1.getItemState());
         assertTrue(aList.isEmpty());
-        assertEquals("Closed", item1.getItemState());
+
     }
 }
