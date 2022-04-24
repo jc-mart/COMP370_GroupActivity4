@@ -7,3 +7,5 @@ In-process:
 
 Complexity:
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jmartinez-29/COMP370_GroupActivity4)
+![Tech debt](https://img.shields.io/codeclimate/tech-debt/jmartinez-29/COMP370_GroupActivity4)
+![Maintainability](https://img.shields.io/codeclimate/maintainability/jmartinez-29/COMP370_GroupActivity4)
