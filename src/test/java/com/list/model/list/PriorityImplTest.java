@@ -26,9 +26,14 @@ class PriorityImplTest {
         aList.add(item1);
         aList.add(item2);
 
-        //Return 1 since item1 has a higher priority than item1
-        assertEquals(1, priorityItem1.compareTo(priorityItem2));
-        assertEquals("Feed dog", aList.indexOf(0));
-        assertEquals("Feed myself", aList.indexOf(1));
+        String a = priorityItem1.getPriority();
+        System.out.println(a);
+        String b = priorityItem2.getPriority();
+
+        //Return - 5 (first letter number of letters away from each other) since priority for item1 (H)
+        // comes before priority for item2 (M)
+        assertEquals(-5, a.compareToIgnoreCase(b));
+        assertEquals(0, aList.indexOf(item1));
+        assertEquals(1, aList.indexOf(item2));
     }
 }
