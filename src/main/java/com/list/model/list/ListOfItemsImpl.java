@@ -32,8 +32,8 @@ public class ListOfItemsImpl implements ListOfItems{
     }
 
     @Override
-    public void remove(Item item) {
-        item.setItemState("Closed");
+    public void completed(Item item) {
+        item.setItemState("Completed");
         items.remove(item);
     }
 
