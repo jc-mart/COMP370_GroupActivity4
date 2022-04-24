@@ -1,3 +1,5 @@
+package com.list.model.list;
+
 import com.list.model.list.Item;
 import com.list.model.list.ItemImpl;
 import com.list.model.list.Priority;
