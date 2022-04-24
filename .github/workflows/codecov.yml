@@ -1,4 +1,4 @@
 ignore:
-  - ".github/"
-  - ".idea/"
-  - "target/"
+  - ".github"
+  - ".idea"
+  - "target"
