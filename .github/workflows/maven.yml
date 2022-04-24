@@ -51,11 +51,12 @@ jobs:
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
       - uses: actions/checkout@master
-      - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov
+      - name: Upload coverage report
       - uses: codecov/codecov-action@v2
         with:
           verbose: true
+      - run: curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov
           
           
