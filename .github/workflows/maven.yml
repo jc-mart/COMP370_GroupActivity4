@@ -51,6 +51,10 @@ jobs:
       - name: Run tests with Maven
         run: mvn -B test --file pom.xml
       - uses: actions/checkout@master
+      - name: Code Coverage Report
+        uses: romeovs/lcov-reporter-action@v0.2.11
       - uses: codecov/codecov-action@v2
         with:
           verbose: true
+          
+          
