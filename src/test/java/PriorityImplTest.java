@@ -1,4 +1,8 @@
-package com.list.model.list;
+import com.list.model.list.Item;
+import com.list.model.list.ItemImpl;
+import com.list.model.list.Priority;
+import com.list.model.list.PriorityImpl;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
