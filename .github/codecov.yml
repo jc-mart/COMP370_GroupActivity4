@@ -6,3 +6,5 @@ ignore:
   - "src/main/java/com/list/model/Item.java"
   - "src/main/java/com/list/model/Priority.java"
   - "src/main/java/com/list/model/ListOfItems.java"
+  - "README.md"
+  - "pom.xml"
