@@ -1,0 +1,8 @@
+ignore:
+  - ".github"
+  - ".idea"
+  - "target"
+  - "src/main/java/View"
+  - "src/main/java/com/list/model/Item.java"
+  - "src/main/java/com/list/model/Priority.java"
+  - "src/main/java/com/list/model/ListOfItems.java"
