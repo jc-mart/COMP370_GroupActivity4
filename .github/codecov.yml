@@ -1,5 +1,5 @@
 ignore:
-  - ".github"
+  - ".github/workflows"
   - ".idea"
   - "target"
   - "src/main/java/View"
