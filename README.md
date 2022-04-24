@@ -9,3 +9,4 @@ Complexity:
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jmartinez-29/COMP370_GroupActivity4)
 ![Tech debt](https://img.shields.io/codeclimate/tech-debt/jmartinez-29/COMP370_GroupActivity4)
 ![Maintainability](https://img.shields.io/codeclimate/maintainability/jmartinez-29/COMP370_GroupActivity4)
+[![Code quality](https://www.codefactor.io/repository/github/jmartinez-29/comp370_groupactivity4/badge)](https://www.codefactor.io/repository/github/jmartinez-29/comp370_groupactivity4)
