@@ -42,14 +42,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Cache Maven packages
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+      
       - name: Run tests with Maven
         run: mvn clean verify -P all-tests
-      
-      - name: upload coverage report
-        run: bash <(curl -s https://codecov.io/bash)
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v2
