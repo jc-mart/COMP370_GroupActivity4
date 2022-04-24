@@ -30,7 +30,7 @@ public class ItemImpl implements Item{
         return priority;
     }
 
-    public void setPriority(Priority Priority) {
+    public void setPriority(Priority priority) {
         this.priority = priority;
     }
 
