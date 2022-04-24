@@ -44,6 +44,6 @@ jobs:
           distribution: 'temurin'
       
       - name: Run tests with Maven
-        run: mvn clean verify -P all-tests .
+        run: mvn test
       - name: Upload coverage reports
         uses: codecov/codecov-action@v2
