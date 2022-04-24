@@ -56,3 +56,5 @@ jobs:
       - uses: codecov/codecov-action@v2
         with:
           verbose: true
+      - name: Send coverage report
+        run: bash <(curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov)
