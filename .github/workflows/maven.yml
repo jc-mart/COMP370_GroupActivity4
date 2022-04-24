@@ -56,3 +56,4 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           verbose: true
+          file: ./target/site/jacoco
