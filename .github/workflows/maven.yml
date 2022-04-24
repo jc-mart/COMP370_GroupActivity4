@@ -49,7 +49,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Run tests with Maven
-        run: mvn -B test --file pom.xml
+        run: mvn clean verify -P all-tests
       - name: Send coverage report
         run: bash <(curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov)
       - uses: actions/checkout@master
