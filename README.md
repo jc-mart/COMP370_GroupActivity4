@@ -6,4 +6,4 @@ In-process:
 
 Complexity:
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jmartinez-29/COMP370_GroupActivity4)
-![Coverage](https://img.shields.io/codecov/c/github/jmartinez-29/COMP370_GroupActivity4?token=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)
+![Coverage](https://img.shields.io/codecov/c/github/jmartinez-29/COMP370_GroupActivity4)
