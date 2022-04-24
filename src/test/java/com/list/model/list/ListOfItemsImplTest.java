@@ -1,7 +1,6 @@
 package com.list.model.list;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -36,12 +35,14 @@ class ListOfItemsImplTest {
         aList.add(item2);
         aList.add(item3);
 
+        Collections.sort(aList, (o1, o2) -> item1.getPriority().compareTo(item2.getPriority()));
+
         assertEquals(priorityItem1, item1.getPriority());
         assertEquals(priorityItem2, item2.getPriority());
         assertEquals(priorityItem3, item3.getPriority());
-        assertEquals(0, aList.indexOf(item1));
+        assertEquals(2, aList.indexOf(item1));
         assertEquals(1, aList.indexOf(item2));
-        assertEquals(2, aList.indexOf(item3));
+        assertEquals(0, aList.indexOf(item3));
     }
 
     @org.junit.jupiter.api.Test
@@ -65,6 +66,8 @@ class ListOfItemsImplTest {
         aList.add(item1);
         aList.add(item2);
         aList.add(item3);
+
+        Collections.sort(aList, Comparator.comparing(Item::getDueDate));
 
         assertEquals(calendar, item1.getDueDate());
         assertEquals(calendar2, item2.getDueDate());
